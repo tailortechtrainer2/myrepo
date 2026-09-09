@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "No package.json in repo, skipping npm install"
+
+  pre_build:
+    commands:
+      - echo "No test suite present, skipping tests"
+
+  build:
+    commands:
+      - echo "Static build artifacts already present in repo, skipping npm build"
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
